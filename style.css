@@ -6,6 +6,10 @@
   --oznaceni-link: #ff3f81;
   --povratak-boja1: #03e9f4;
   --povratak-boja2: #050801;
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --snapchat: #fffc00;
+  --mail: #25d366;
 }
 * {
   margin: 0;
@@ -24,83 +28,7 @@ main {
 }
 /* općenito - završetak */
 
-/* index.html - početak */
-ul {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-ul li {
-  list-style: none;
-}
-ul li:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  color: white;
-  font-size: 8em;
-  font-weight: 700;
-  pointer-events: none;
-  opacity: 0;
-  letter-spacing: 20px;
-  transition: 0.5s;
-  white-space: nowrap;
-}
-ul li:hover:before {
-  opacity: 0.1;
-  letter-spacing: 20px;
-}
-ul li a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px 6px 15px;
-  text-decoration: none;
-  background: var(--pozadina-linka);
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  overflow: hidden;
-  transition: 0.5s;
-  z-index: 1;
-}
-ul:hover li a {
-  opacity: 0;
-}
-ul li a:hover {
-  transform: scale(1.4);
-  z-index: 1000;
-  background: var(--oznaceni-link);
-  opacity: 1;
-}
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100px;
-  width: 80px;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-  transform: skewX(35deg);
-  transition: 0s;
-}
-ul li a:hover:before {
-  left: calc(100% + 100px);
-  transition: 0.5s;
-  transition-delay: 0.2s;
-}
-/* index.html - završetak */
-
-/* onama.html - početak */
-#onama main {
-  flex-wrap: wrap;
-}
+/* Dugme za povratak - početak */
 header a {
   position: relative;
   display: inline-block;
@@ -196,6 +124,86 @@ header a span:nth-child(4) {
     bottom: 100%;
   }
 }
+/* Dugme za povratak - završetak */
+
+/* index.html - početak */
+#index {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#index li {
+  list-style: none;
+}
+#index li:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  color: white;
+  font-size: 8em;
+  font-weight: 700;
+  pointer-events: none;
+  opacity: 0;
+  letter-spacing: 20px;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+#index li:hover:before {
+  opacity: 0.1;
+  letter-spacing: 20px;
+}
+#index li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px 6px 15px;
+  text-decoration: none;
+  background: var(--pozadina-linka);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+#index:hover li a {
+  opacity: 0;
+}
+#index li a:hover {
+  transform: scale(1.4);
+  z-index: 1000;
+  background: var(--oznaceni-link);
+  opacity: 1;
+}
+#index li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  transform: skewX(35deg);
+  transition: 0s;
+}
+#index li a:hover:before {
+  left: calc(100% + 100px);
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+/* index.html - završetak */
+
+/* onama.html - početak */
+#onama main {
+  flex-wrap: wrap;
+}
+
 .box {
   position: relative;
   width: 300px;
@@ -287,12 +295,109 @@ header a span:nth-child(4) {
 }
 /* onama.html - završetak */
 
-/* Testing, testing... */
-/* header {
-  border: 1px solid red;
-  height: 8vh;
+/* oskoli.html - početak */
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
-.about {
-  border: 1px solid red;
-  height: 32vh;
-} */
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  background: black;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
+}
+/* oskoli.html - završetak */
+
+/* drustvenemreze.html - početak */
+.drustvene {
+  position: relative;
+  display: flex;
+  transform-style: preserve-3d;
+  transform: rotate(-25deg) skew(25deg);
+}
+.drustvene li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+.drustvene li:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  transform-origin: top;
+  transform: skewX(-41deg);
+}
+.drustvene li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -9px;
+  width: 9px;
+  height: 10px;
+  background: #2a2a2a;
+  transform-origin: right;
+  transform: skewY(-49deg);
+}
+.drustvene li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 30px !important;
+  transition: 0.2s;
+}
+.drustvene li:hover span {
+  z-index: 1000;
+  transition: 0.5s;
+  color: white;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.drustvene li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.drustvene li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+.drustvene li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+.drustvene li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+.drustvene li:hover span:nth-child(1) {
+  transform: translate(0px, 0px);
+  opacity: 0.2;
+}
+.drustvene li:nth-child(1):hover span {
+  background: var(--facebook);
+}
+.drustvene li:nth-child(2):hover span {
+  background: var(--instagram);
+}
+.drustvene li:nth-child(3):hover span {
+  background: var(--snapchat);
+}
+.drustvene li:nth-child(4):hover span {
+  background: var(--mail);
+}
+/* drustvenemreze.html - kraj */
