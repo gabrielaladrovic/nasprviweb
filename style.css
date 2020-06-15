@@ -293,6 +293,42 @@ header a span:nth-child(4) {
   line-height: 20px;
   letter-spacing: 1px;
 }
+.about {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.ime {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 500px 0 0 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  background: var(--povratak-boja1);
+  color: var(--povratak-boja2);
+  box-shadow: 0 0 2px var(--povratak-boja1), 0 0 5px var(--povratak-boja1);
+}
+.izbaci {
+  display: none;
+}
+.podigni {
+  margin: -495px 0 0 0;
+  transition: 0.5s;
+}
+.spusti {
+  margin: 500px 0 0 0;
+  transition: 0.5s;
+}
+.about p {
+  color: #00fff1;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  border-top: 1px solid #00fff1;
+  padding: 25px 0 0 0;
+  margin: -4px 0 0 0;
+}
 /* onama.html - završetak */
 
 /* oskoli.html - početak */
