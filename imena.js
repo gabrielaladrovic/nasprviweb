@@ -15,7 +15,9 @@ const pokaziGabriela = () => {
 const vratiGabriela = () => {
   document.getElementById("gabriel").classList.add("spusti");
   document.getElementById("gabriel").classList.remove("podigni");
-  document.getElementById("andrija").classList.remove("izbaci");
+  setTimeout(() => {
+    document.getElementById("andrija").classList.remove("izbaci");
+  }, 500);
 };
 
 const pokaziMarina = () => {
@@ -27,8 +29,10 @@ const pokaziMarina = () => {
 const vratiMarina = () => {
   document.getElementById("marin").classList.add("spusti");
   document.getElementById("marin").classList.remove("podigni");
-  document.getElementById("andrija").classList.remove("izbaci");
-  document.getElementById("gabriel").classList.remove("izbaci");
+  setTimeout(() => {
+    document.getElementById("andrija").classList.remove("izbaci");
+    document.getElementById("gabriel").classList.remove("izbaci");
+  }, 500);
 };
 
 let andrija = document.getElementById("box-andrija");
